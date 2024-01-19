@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "a3a59dff-846b-49b8-8642-2095abf079ab",
+		"name": "assignment2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25090773"
+	},
+	"item": [
+		{
+			"name": "Users Routes",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Buğra Arslan\",\r\n    \"email\": \"bugra@gmail.com\",\r\n    \"password\": \"Password123\",\r\n    \"role\": \"Developer\",\r\n    \"stillEmployee\": true,\r\n    \"department\": \"IT Department\",\r\n    \"age\": 24\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Buğra Arslan\",\r\n    \"email\": \"arslan@gmail.com\",\r\n    \"password\": \"arslaN124\",\r\n    \"stillEmployee\": true,\r\n    \"role\": \"Fullstack Developer\",\r\n    \"department\": \"IT Department\",\r\n    \"age\": 24\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/delete/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/:id or free",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								":id or free"
+							],
+							"variable": [
+								{
+									"key": "id or free",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "**POST** [http://localhost:3000/users/create](http://localhost:3000/users/createEndFragment)\n\nKullanıcı kaydı olur username vb bilgile kaydolur.\n\n_örnek veri:_\n\n{ \"username\": \"Buğra Arslan\", \"email\": \"[bugra@gmail.com](https://mailto:bugra@gmail.com)\", \"password\": \"Password123\", \"role\": \"Developer\", \"stillEmployee\": true, \"department\": \"IT Department\", \"age\": 24}\n\n<img src=\"https://content.pstmn.io/863845f2-a058-4afa-ba0f-942c6ef80aaf/dXNlclBPU1QuUE5H\" width=\"616\" height=\"637\">\n\n**PUT** [http://localhost:3000/users/edit](http://localhost:3000/users/edit)\n\nKullanıcı ile ilgili bilgileri body içerisinde token ile göndermek gereklidir.\n\n_Örnek Veri:_\n\n{ \"username\": \"Buğra Arslan\", \"email\": \"[arslan@gmail.com](https://mailto:arslan@gmail.com)\", \"password\": \"arslaN124\", \"stillEmployee\": true, \"role\": \"Fullstack Developer\", \"department\": \"IT Department\", \"age\": 24}\n\n<img src=\"https://content.pstmn.io/347e21d9-7b19-4c3c-98d6-7b91511ce684/dXNlclBVVC5QTkc=\">\n\n**GET USER / USERS**\n\n[http://localhost:3000/users/:id](http://localhost:3000/users/:id)\n\nTek Bir Kullanıcı döner.\n\n_Örnek Veri:_\n\n\"id\": \"44625b74-6346-4862-aadd-b2d9006d30b0\"\n\n<img src=\"https://content.pstmn.io/6d9139d4-ed0b-436d-a808-3f43255e4d3d/dXNlcnNHRVQuUE5H\">\n\nParametre yollanmadığında tüm kullanıcıları döner.\n\n[http://localhost:3000/users/](http://localhost:3000/users/:id)\n\n<img src=\"https://content.pstmn.io/6caef8c9-31c0-4363-a1e9-5df2802f050f/dXNlckxpc3RHRVQuUE5H\">"
+		},
+		{
+			"name": "Auth Routes",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"description": "**LOGİN**\n\n[http://localhost:3000/auth/login](http://localhost:3000/auth/login)\n\n<img src=\"https://content.pstmn.io/e3c4b732-66cf-41f5-949d-f13733ef123f/bG9naW5QT1NULlBORw==\" alt=\"\">\n\nLOGOUT\n\n[http://localhost:3000/auth/logout](http://localhost:3000/auth/login)\n\n<img src=\"https://content.pstmn.io/95a3a77e-e6b6-43d5-876b-e6cbd13154de/bG9nb3V0R0VULlBORw==\" alt=\"\">"
+		}
+	]
+}

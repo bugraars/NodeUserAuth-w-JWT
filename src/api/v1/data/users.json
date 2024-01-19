@@ -1,0 +1,13 @@
+[
+  {
+    "id": "12b92070-0f77-4e85-9228-0a3264f45127",
+    "username": "bugraarslan",
+    "email": "arslan@gmail.com",
+    "password": "arslaN124",
+    "stillEmployee": true,
+    "role": "Full-stack Developer",
+    "department": "IT Department",
+    "age": 24,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJ1Z3JhYXJzbGFuIiwiaWF0IjoxNzA1NjcxMzk2fQ.WLw3oxogFDrFaY3nAlGxDS__bKC_jwoLcf8pu3Z91tE"
+  }
+]
