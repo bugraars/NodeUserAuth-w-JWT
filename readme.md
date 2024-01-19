@@ -86,8 +86,4 @@ This file defines the access token generation services.
 
 ## ⛔️ .gitignore: 
 This file specifies files that git should not monitor.
-
-## 🔐 License
-MIT
-
 ```
